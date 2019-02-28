@@ -6,5 +6,5 @@ Git tracks changes of files.
 Creating a new beanch is quick and simple.
 Enable git merge Fast-forword.
 This is a bug.
-This is dev branch.
+This is dev branch ssss.
 This is dev branch at e:\ .

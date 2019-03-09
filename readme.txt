@@ -6,3 +6,4 @@ Git tracks changes of files.
 Creating a new beanch is quick and simple.
 Enable git merge Fast-forword.
 This is a new bug.
+This is a new line.

@@ -1,0 +1,55 @@
+#配置tomcat的启动端口号
+server:
+  port: 8080
+#配置应用程序的上下文路径
+  #context-path: /springBoot-demo
+
+#自定义配置文件
+provider:
+  name: "徐唯国"
+  location: "北京西城区"
+
+
+spring:
+  #模拟不同开发环境下的配置文件
+  #激活配置文件，如果激活的配置文件中的内容与本配置文件中的内容一致，激活的配置文件内容会覆盖掉本配置文件中的内容
+  #profiles:
+    #激活application-online.yml(项目上线环境)
+    #active: online
+    #激活application-test.yml(项目测试环境)
+    #active: test
+    #激活application-dev.yml(项目开发环境)
+    #active: dev
+
+  #想要springBoot访问到jsp文件，配置视图解析器
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+
+
+  #配置数据库连接信息，让Spring访问到数据库
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/itripdb?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123
+
+  #配置redis数据库连接信息
+  redis:
+    #配置虚拟机的IP地址
+    host: 192.168.160.128
+    #配置redis的端口号
+    port: 6379
+    #配置redis数据库的密码
+    password: 123456
+
+
+#Spring整合MyBatis
+mybatis:
+  #配置mapper.xml的位置
+  mapper-locations: com/github/mapper/*.xml
+  #配置类型别名
+  type-aliases-package: com/github/pojo
+
+
